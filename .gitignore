@@ -1,25 +1,42 @@
+# This file is a comprehensive .gitignore for a BDD Java Selenium project.
+# It is designed to ignore common files and directories that should not be committed to Git.
+
+# ====================
+# Build Artifacts
+# ====================
+# Ignore all build output directories
 target/
+build/
+bin/
+
+# Exceptions for Maven Wrapper
+# These files are needed to ensure other developers can build the project.
 !.mvn/wrapper/maven-wrapper.jar
-!**/src/main/**/target/
-!**/src/test/**/target/
+
+# ====================
+# IDE-specific Files
+# ====================
 
 ### IntelliJ IDEA ###
-.idea/modules.xml
-.idea/jarRepositories.xml
-.idea/compiler.xml
-.idea/libraries/
+# Ignore the entire .idea folder, except for specific files that should be shared.
+.idea/
+# The following files are typically ignored to avoid conflicts, but if you have a shared config, you might keep them.
+# I've included them here as a common practice for individual developers.
+# !.idea/vcs.xml
+# !.idea/codeStyles/
+# !.idea/runConfigurations/
 *.iws
 *.iml
 *.ipr
 
 ### Eclipse ###
-.apt_generated
 .classpath
-.factorypath
 .project
-.settings
-.springBeans
-.sts4-cache
+.settings/
+.factorypath
+.sts4-cache/
+.apt_generated/
+.springBeans/
 
 ### NetBeans ###
 /nbproject/private/
@@ -27,12 +44,62 @@ target/
 /dist/
 /nbdist/
 /.nb-gradle/
-build/
-!**/src/main/**/build/
-!**/src/test/**/build/
 
-### VS Code ###
+### Visual Studio Code ###
 .vscode/
 
-### Mac OS ###
+# ====================
+# Java
+# ====================
+# Compiled class files
+*.class
+
+# Maven build artifacts
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+release.properties
+dependency-reduced-pom.xml
+buildNumber.properties
+.mvn/timing.properties
+
+# Log files
+*.log
+hs_err_pid*
+derby.log
+
+# ====================
+# Selenium & Cucumber
+# ====================
+# Cucumber reports and output files.
+# Adjust the paths below if your project stores reports in a different location.
+cucumber-html-reports/
+html-report/
+test-output/
+target/cucumber-reports/
+target/cucumber-html-reports/
+
+# Log files from WebDriver
+chromedriver.log
+geckodriver.log
+msedgedriver.log
+safaridriver.log
+
+# Screenshots of failed tests
+# Adjust this path to match where your framework saves screenshots.
+screenshots/
+target/screenshots/
+
+# ====================
+# Operating System Files
+# ====================
+### macOS ###
 .DS_Store
+.AppleDouble
+.LSOverride
+
+### Windows ###
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
