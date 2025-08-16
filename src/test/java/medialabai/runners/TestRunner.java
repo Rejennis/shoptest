@@ -10,7 +10,7 @@ import org.junit.runner.RunWith;
         features = "src/test/resources/features",
 
         glue = "medialabai.stepdefinitions",
-        plugin = {"pretty", "html:target/cucumber-html-reports", "json:target/cucumber-reports/Cucumber.json"}
+        plugin = {"pretty", "html:target/cucumber/report.html", "json:target/cucumber/report.json"}
 )
 public class TestRunner {
 }
