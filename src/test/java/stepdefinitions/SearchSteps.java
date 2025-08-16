@@ -36,8 +36,8 @@ public class SearchSteps {
 
     @Given("a user is on the product search page")
     public void userIsOnProductSearchPage() {
-        //driver.get("https://magento2-demo.scandiweb.com/");
-        driver.get("https://amazon.com/");
+        driver.get("https://magento2-demo.scandiweb.com/");
+        //driver.get("https://amazon.com/");
 
 
     }
