@@ -9,7 +9,7 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
         features = "src/test/resources/features",
 
-        glue = "medialabai.stepdefinitions",
+        glue = "stepdefinitions",
         plugin = {"pretty", "html:target/cucumber/report.html", "json:target/cucumber/report.json"}
 )
 public class TestRunner {
